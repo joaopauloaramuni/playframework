@@ -1,0 +1,38 @@
+@(message: String)
+
+@main("Auto-Help") {
+		
+		<!--Painel-->
+		<form><input id="msg" type="hidden" value=""></input></form>
+		<div style="background-color: #FAFAFA; width:100%;">
+			<br>
+			<h1 style="color: #ED1E25; text-align:center; font-family:T2;">Painel de Controle</h1>
+			<br>
+			<div class="painel">
+				<div style="margin 0 auto;">
+					<div id="cssmenu">
+						<ul>
+						   	<li class="active"><div style="text-align:center; width:125px"><a href="/atend"><span>ATENDIMENTO</span></a></div></li>
+							<li><div style="text-align:center; width:125px"><a href="/func"><span>FUNCION&Aacute;RIO</span></a></div></li>
+							<li><div style="text-align:center; width:125px"><a href="/cliente"><span>CLIENTE</span></a></div></li>
+							<li><div style="text-align:center; width:125px"><a href="/veiculo"><span>VE&Iacute;CULO</span></a></div></li>
+							<li><div style="text-align:center; width:125px"><a href="/servico"><span>SERVI&Ccedil;O</span></a></div></li>
+							<li><div style="text-align:center; width:125px"><a href="/peca"><span>PE&Ccedil;A</span></a></div></li>
+							<li class="last"><div style="text-align:center; width:125px"><a href="/relatorios"><span>RELAT&Oacute;RIOS</span></a></div></li>
+						</ul>
+					</div>
+				</div>
+				<br>
+				<div style="width: 900px; margin:0 auto; text-align:center;">
+					<span class="comumText"><strong>Painel de Controle - Auto Help</strong></span><br>
+					<span class="comumText">@message<br>
+					<span class="comumText"><a href="/user">Adicionar Usu&aacute;rio</a></span><br><br>
+					<a href="/logout"><img src="@routes.Assets.at("stylesheets/images/logout.png")"></img></a><br>
+					<span class="comumText"><strong>Sair</strong></span>
+				</div>
+			</div>
+			<br>
+		</div>
+		
+		<!--Fim Painel-->
+}

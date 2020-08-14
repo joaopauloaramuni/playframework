@@ -1,0 +1,33 @@
+@(message: String)
+
+@main("Auto-Help") {
+		
+		<!--Contato-->
+		<form><input id="msg" type="hidden" value=@message></input></form>
+		<div style="background-color: #FAFAFA; width:100%;">
+			<br>
+			<h1 style="color: #ED1E25; text-align:center; font-family:SF Sports;">Contato</h1>
+			<br>
+			<div style="padding:10px; border: thin solid #ED1E25; margin:0 auto; width: 580px; height: 250px; background-color: #FFFFFF;">
+				<div style="text-align:center;"><span class="comumText"><strong>Auto-Help</strong> - Servi&ccedil;os Automotivos</span></div><br>
+					<div style="float: left; width:350px;">
+						<span class="comumText"><strong>Rua:</strong> Jose Oscar Barreira, 387</span><br>
+						<span class="comumText"><strong>Bairro:</strong> Itapoa - Belo Horizonte - Minas Gerais</span><br>
+						<span class="comumText"><strong>CEP:</strong> 31710-580</span><br>
+						<span class="comumText"><strong>Email:</strong> autohelp_gmail.com</span><br><br>
+						<span class="comumText" style="font-size:16px;">Tel: (31) 4063-6336<br>Tel: (31) 7164-4600</span><br><br>
+						<a style="font-family:T1; font-weight:bold; color:#ED1E25; font-size:16px;" href="/email">Fale Conosco</a>
+					</div>
+					<div style="float: right;">
+					<img alt="phone" src="@routes.Assets.at("stylesheets/images/phone.png")"></img>
+					</div>
+			</div>
+			<br>
+			<h1 style="color: #ED1E25; text-align:center; font-family:SF Sports;">Mapa</h1>
+			<br>
+			<div style="text-align:center;"><iframe style="border: thin solid #cccccc;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.0617355471218!2d-43.954525600000004!3d-19.83734059999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6901b1fa97027%3A0xd44bf497e661a881!2sRua+Jos%C3%A9+Oscar+Barreira%2C+387+-+Itapo%C3%A3!5e0!3m2!1spt-BR!2sbr!4v1403189993847" width="600" height="450" frameborder="0" style="border:0"></iframe></div>
+			<br><br>
+		</div>
+		
+		<!--Fim Contato-->
+}

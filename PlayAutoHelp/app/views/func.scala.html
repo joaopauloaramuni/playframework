@@ -1,0 +1,149 @@
+@(funcForm: Form[Func], message: String)
+@import helper._
+@import helper.twitterBootstrap._
+
+@main("Auto-Help") {
+		
+		<!--Func-->
+		<form><input id="msg" type="hidden" value=@message></input></form>
+		<div style="background-color: #FAFAFA; width:100%;">
+			<br>
+			<h1 style="color: #ED1E25; text-align:center; font-family:T2;">Painel de Controle</h1>
+			<br>
+			<div style="padding:10px; border: thin solid #ED1E25; margin:0 auto; width: 900px; height: 660px; background-color: #FFFFFF;">
+				<div style="margin 0 auto;">
+					<div id="cssmenu">
+						<ul>
+						   	<li class="active"><div style="text-align:center; width:125px"><a href="/atend"><span>ATENDIMENTO</span></a></div></li>
+							<li><div style="text-align:center; width:125px"><a href="/func"><span>FUNCION&Aacute;RIO</span></a></div></li>
+							<li><div style="text-align:center; width:125px"><a href="/cliente"><span>CLIENTE</span></a></div></li>
+							<li><div style="text-align:center; width:125px"><a href="/veiculo"><span>VE&Iacute;CULO</span></a></div></li>
+							<li><div style="text-align:center; width:125px"><a href="/servico"><span>SERVI&Ccedil;O</span></a></div></li>
+							<li><div style="text-align:center; width:125px"><a href="/peca"><span>PE&Ccedil;A</span></a></div></li>
+							<li class="last"><div style="text-align:center; width:125px"><a href="/relatorios"><span>RELAT&Oacute;RIOS</span></a></div></li>
+						</ul>
+					</div>
+				</div>
+				<br>
+				<div style="width: 900px; margin:0 auto;  text-align:center;">
+					<span class="comumText"><strong>Painel de Controle - Auto Help</strong></span><br><br>
+					<!-- Inicio Form Func -->
+					<div style="padding:10px; border: thin solid #ED1E25; width: 400px; margin:0 auto; text-align:left;">
+						<h1 style="padding:10px; font-family:T1; text-align:center; color:#828282;">Funcion&aacute;rio</h1>
+						@helper.form(action = routes.Application.action_func) {
+						<fieldset>
+						<table width="100%" cellspacing="15">
+							<tr>
+								<td class="comumText">Nome:</td>
+								<td>
+									@inputText( funcForm("nome"), 
+									'_label -> "", 
+									'_help -> "*", 
+									'_error -> funcForm.globalError,
+									'size -> 30 )
+								</td>
+							</tr>
+							<tr>
+								<td class="comumText">CPF:</td>
+								<td>
+									@inputText( funcForm("cpf"), 
+									'_label -> "", 
+									'_help -> "*", 
+									'_error -> funcForm.globalError,
+									'size -> 30 )
+								</td>
+							</tr>
+							<tr>
+								<td class="comumText">Endere&ccedil;o:</td>
+								<td>
+									@inputText( funcForm("endereco"), 
+									'_label -> "", 
+									'_help -> "*", 
+									'_error -> funcForm.globalError,
+									'size -> 30 )
+								</td>
+							</tr>
+							<tr>
+								<td class="comumText">Email:</td>
+								<td>
+									@inputText( funcForm("email"), 
+									'_label -> "", 
+									'_help -> "*", 
+									'_error -> funcForm.globalError,
+									'size -> 30 )
+								</td>
+							</tr>
+							<tr>
+								<td class="comumText">Data de Nascimento:</td>
+								<td>
+									@inputText( funcForm("data"), 
+									'_label -> "", 
+									'_help -> "*", 
+									'_error -> funcForm.globalError,
+									'size -> 30 )
+								</td>
+							</tr>
+							<tr>
+								<td class="comumText">Telefone:</td>
+								<td>
+									@inputText( funcForm("telefone"), 
+									'_label -> "", 
+									'_help -> "*", 
+									'_error -> funcForm.globalError,
+									'size -> 30 )
+								</td>
+							</tr>
+							<tr>
+								<td class="comumText">Celular:</td>
+								<td>
+									@inputText( funcForm("celular"), 
+									'_label -> "", 
+									'_help -> "*", 
+									'_error -> funcForm.globalError,
+									'size -> 30 )
+								</td>
+							</tr>
+							<tr>
+								<td class="comumText">Sal&aacute;rio:</td>
+								<td>
+									@inputText( funcForm("salario"), 
+									'_label -> "", 
+									'_help -> "", 
+									'_error -> funcForm.globalError,
+									'size -> 30 )
+								</td>
+							</tr>
+							<tr>
+								<td class="comumText">Data de Admiss&atilde;o:</td>
+								<td>
+									@inputText( funcForm("data_ad"), 
+									'_label -> "", 
+									'_help -> "*", 
+									'_error -> funcForm.globalError,
+									'size -> 30 )
+								</td>
+							</tr>
+							</table>
+							<table cellspacing="15" width="100%">
+								<tr>
+									<td align="right"><input class="i2Style" type="submit" name="enviar"
+										value="Cadastrar" /></td>
+									<td align="left"><input class="i2Style" type="reset" name="limpar"
+										value="Limpar" /></td>
+								</tr>
+							</table>
+						</fieldset>
+						}
+					</div>
+					<br>
+					<!-- Fim Form Func -->
+					
+					<a href="/painel"><img src="@routes.Assets.at("stylesheets/images/voltar.png")"></img></a><br>
+					<span class="comumText"><strong>Voltar</strong></span>
+				</div>
+			</div>
+			<br>
+		</div>
+		
+		<!--Fim Func-->
+}
