@@ -1,2 +1,2 @@
-# playframework
-Repo Play
+# Play Framework
+Repo Play Framework
