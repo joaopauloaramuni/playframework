@@ -1,0 +1,317 @@
+html{
+	background-image: url(../images/bgreen.jpg);
+	width:100%;
+	height:100%;
+	padding:0;
+	opacity:0.80;
+	-moz-opacity: 0.80;
+	filter: alpha(opacity=80);
+
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #FFFFFF; 
+    font-family: Verdana;
+	font-size: 12px;
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	background-position: center top;
+	width: 100%;
+	height:100%;
+	overflow: hidden;
+}
+h1 {
+	font-family: 'Aldrich';
+	font-size: 16px;
+	line-height: 26px;
+	margin: 0;
+	font-weight: 300;
+	color: #666666;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+}
+
+h1 span{
+	font-weight: 500;
+}
+
+.superPag{
+	padding-top: 20px;
+	height: 100%;
+}
+
+.paginas{
+	color: #363B35; 
+	padding: 10px;
+	border: 1px solid #363B35;
+	width: 30%;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	opacity:0.75;
+	-moz-opacity: 0.75;
+	filter: alpha(opacity=75);
+	-moz-border-radius: 10px; /* Para Firefox */
+	-webkit-border-radius: 10px; /*Para Safari e Chrome */
+	border-radius: 10px; /* Para Opera 10.5+*/
+}
+
+.videoPlay{
+	text-align:center;
+	color: #363B35; 
+	padding: 10px;
+	border: 1px solid #363B35;
+	width: 50%;
+	margin: 0 auto;
+	background-color: #CCCCCC;
+	-moz-border-radius: 10px; /* Para Firefox */
+	-webkit-border-radius: 10px; /*Para Safari e Chrome */
+	border-radius: 10px; /* Para Opera 10.5+*/
+}
+
+.linkBack{
+	width:100%;
+	margin: 0 auto;
+	text-align:center;
+}
+
+.backIcon:hover{
+	opacity:0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+}
+
+.btn{
+	width: 70px;
+}
+
+.link{
+	font: normal 11px Verdana;
+	font-weight: bold;
+	color: #363B35;
+}
+
+.logo{
+	padding-left:10px; 
+	float: left; 
+	width:169px; 
+	height:57px;
+	min-height:100%;
+}
+
+.msgBox{
+	font: normal 10px Verdana;
+	font-weight: bold;
+	color: #363B35;
+	float: left; 
+	margin: 0px 0px 0px 30px;
+	width: 450px;
+	height: 100%;
+}
+
+.info{
+	padding-left:10px;
+	margin-left: 10px;
+	width:425px; 
+	height: 22%;
+	padding-left: 5%;
+	margin: 0;
+	-moz-border-radius: 10px; /* Para Firefox */
+	-webkit-border-radius: 10px; /*Para Safari e Chrome */
+	border-radius: 10px; /* Para Opera 10.5+*/
+	border: solid 1px #8FAE88;
+}
+
+.txtArea{
+	resize:none;
+	scrollbar-arrow-color: #000066;
+	scrollbar-base-color: #000033;
+	scrollbar-dark-shadow-color: #336699;
+	scrollbar-track-color: #666633;
+	scrollbar-face-color: #cc9933;
+	scrollbar-shadow-color: #DDDDDD;
+	scrollbar-highlight-color: #CCCCCC;
+}
+
+#txtAreaEmail{
+	resize:none;
+	scrollbar-arrow-color: #000066;
+	scrollbar-base-color: #000033;
+	scrollbar-dark-shadow-color: #336699;
+	scrollbar-track-color: #666633;
+	scrollbar-face-color: #cc9933;
+	scrollbar-shadow-color: #DDDDDD;
+	scrollbar-highlight-color: #CCCCCC;
+}
+
+.halfBg{
+	width: 100%;
+	height: 40%;
+	padding-left: 12px;
+	padding-top: 10px;
+}
+
+.rodape{
+	width: 100%;
+	height:10%;
+	min-height: 10%;
+	background-color: #363B35;
+	opacity:0.75;
+	-moz-opacity: 0.75;
+	filter: alpha(opacity=75);
+}
+
+.boxPag{
+	width: 100%;
+	height: 80%;
+}
+
+.barraLogin{
+	width:100%;
+	height: 10%;
+	border-bottom:solid 1px #363B35;
+}
+
+.jimgMenu{
+	opacity:0.85;
+	-moz-opacity: 0.85;
+	filter: alpha(opacity=85);
+}
+
+.boxContact{
+	float:left;
+	width: 15%;
+	height:100%;
+	padding-left: 10px;
+	margin: 10px -20px 10px -5px;
+}
+.boxDevelop{
+	float:right;
+	width: 85%;
+	height:100%;
+	border-left: solid 1px #FFFFFF;
+	padding-left: 10px;
+	margin: 5px -25px 5px -5px;
+}
+
+.email{
+	float:left;
+	width: 15%;
+	heigth: 40%;
+	margin: 50px 0px 0px 0px;
+	opacity:0.85;
+	-moz-opacity: 0.85;
+	filter: alpha(opacity=85);
+}
+
+.linkEmail:hover{
+	opacity:0.80;
+	-moz-opacity: 0.80;
+	filter: alpha(opacity=80);
+}
+
+.downloads{
+	float:left;
+	width: 15%;
+	heigth: 40%;
+	margin: 50px 0px 0px 0px;
+	opacity:0.85;
+	-moz-opacity: 0.85;
+	filter: alpha(opacity=85);
+}
+
+.linkDownloads:hover {
+	opacity:0.80;
+	-moz-opacity: 0.80;
+	filter: alpha(opacity=80);
+}
+
+.videoIcon{
+	float:left;
+	width: 70%;
+	heigth: 40%;
+	margin: 50px 0px 0px 0px;
+	opacity:0.85;
+	-moz-opacity: 0.85;
+	filter: alpha(opacity=85);
+}
+
+.linkVideo:hover {
+	opacity:0.80;
+	-moz-opacity: 0.80;
+	filter: alpha(opacity=80);
+}
+
+.videoIcon span{
+	color:#FFFFFF;
+}
+
+.downloads span{
+	color:#FFFFFF;
+}
+
+.extensaoPDF{	
+	color: #FF0000;
+}
+.extensaoDOC{	
+	color: #0000FF;
+}
+.extensaoZIP{	
+	color: #B8860B;
+}
+.extensaoJAR{	
+	color: #B22222;
+}
+.infoSpan{
+	color: #008080;
+}
+
+.rodapeIcon1:hover{
+	opacity:0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+}
+.rodapeIcon2:hover{
+	opacity:0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+}
+.rodapeIcon3:hover{
+	opacity:0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+}
+.rodapeIcon4:hover{
+	opacity:0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+}
+
+.add:hover{
+	opacity:0.90;
+	-moz-opacity: 0.90;
+	filter: alpha(opacity=90);
+}
+.edit:hover{
+	opacity:0.90;
+	-moz-opacity: 0.90;
+	filter: alpha(opacity=90);
+}
+.del:hover{
+	opacity:0.90;
+	-moz-opacity: 0.90;
+	filter: alpha(opacity=90);
+}
+.search:hover{
+	opacity:0.90;
+	-moz-opacity: 0.90;
+	filter: alpha(opacity=90);
+}
+.play:hover{
+	opacity:0.90;
+	-moz-opacity: 0.90;
+	filter: alpha(opacity=90);
+}
+.downIcon:hover{
+	background-color: #CCCCCC;
+}
