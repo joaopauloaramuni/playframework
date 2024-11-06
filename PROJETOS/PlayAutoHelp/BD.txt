@@ -1,0 +1,24 @@
+create table usuario (id_usuario serial primary key, id_func integer, username varchar(255), password varchar(255), foreign key (id_func) REFERENCES funcionario (id_func));
+
+create table email (sender varchar(255), recipient varchar(255), subject varchar(255), message varchar(255));
+
+create table peca (id_peca serial primary key, nome varchar(255), preco varchar(255));
+
+create table cliente (id_cliente serial primary key, nome varchar(255), cpf varchar(255), endereco varchar(255), email varchar(255), data varchar(255),
+telefone varchar(255), celular varchar(255));
+
+create table funcionario (id_func serial primary key, nome varchar(255), cpf varchar(255), endereco varchar(255), email varchar(255), data varchar(255),
+telefone varchar(255), celular varchar(255), salario varchar(255), data_ad varchar(255));
+
+create table servico(id_serv integer, id_peca integer, qtd_peca varchar(255), nome varchar(255), valor varchar(255), primary key (id_serv, id_peca));
+
+create table veiculo (id_veic serial primary key, id_cliente integer, marca varchar(255), modelo varchar(255), placa varchar(255), ano_f varchar(255), ano_m varchar(255),
+km varchar(255), oleo varchar(255), foto varchar(255), FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente));
+
+create table log (id_log serial primary key, id_usuario integer, data varchar(255), acao varchar(255), foreign key (id_usuario) REFERENCES usuario (id_usuario));
+
+create table atend (id_atend integer, id_serv integer, id_func integer, id_veic integer, vlr_total varchar(255), desconto varchar(255), data_e varchar(255), data_s varchar(255), 
+finalizado varchar(255), primary key (id_atend, id_serv), foreign key (id_func) REFERENCES funcionario (id_func), foreign key (id_veic) REFERENCES veiculo(id_veic));
+
+insert into usuario values (1, 1, 'paulo', '040792');
+insert into peca values (0, '', '', '');

@@ -1,0 +1,113 @@
+@(message: String)
+
+@main("Auto Help") {
+				<!-- Index -->
+				<!-- slider -->
+				<form><input id="msg" type="hidden" value=@message></input></form>
+				<div class="m-slider">
+					<div class="slider-holder">
+						<span class="slider-shadow"></span>
+						<span class="slider-b"></span>
+						<div class="slider flexslider">
+							<ul class="slides">
+								<li>
+									<div class="img-holder">
+										<img src="@routes.Assets.at("stylesheets/images/slide-img1.png")" alt="" />
+									</div>
+									<div class="slide-cnt">
+										<h2>Manutencao</h2>
+										<div class="box-cnt">
+											<p style="font-family: T2; text-align:justify;">Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; </p>
+										</div>
+										<a href="/manu" class="grey-btn" style="font-family: T1;">Ver Mais</a>
+									</div>
+								</li>
+								<li>
+									<div class="img-holder">
+										<img src="@routes.Assets.at("stylesheets/images/slide-img2.png")" alt="" />
+									</div>
+									<div class="slide-cnt">
+										<h2>Mecanico</h2>
+										<div class="box-cnt">
+											<p style="font-family: T2; text-align:justify;">Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; </p>
+										</div>	
+										<a href="/mec" class="grey-btn" style="font-family: T1;">Ver Mais</a>
+									</div>
+								</li>
+								<li>
+									<div class="img-holder">
+										<img src="@routes.Assets.at("stylesheets/images/slide-img3.png")" alt="" />
+									</div>
+									<div class="slide-cnt">
+										<h2>Produtos</h2>
+										<div class="box-cnt">
+											<p style="font-family: T2; text-align:justify;">Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; </p>
+										</div>
+										<a href="/pec" class="grey-btn" style="font-family: T1;">Ver Mais</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>		
+				<!-- end of slider -->
+				<!-- main -->
+				<div class="main">
+					<a href="#" class="m-btn-grey grey-btn">Ver Mais</a>
+					<section class="cols">
+						<div class="col">
+							<img src="@routes.Assets.at("stylesheets/images/col-img1.png")" alt="" />
+							<div class="col-cnt">
+								<h2 style="font-family: SF;">Check-Up</h2>
+								<p style="text-align: justify;">Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo;</p>
+								<a href="/mec" class="more">Ver Mais</a>
+							</div>
+						</div>
+						<div class="col">
+							<img src="@routes.Assets.at("stylesheets/images/col-img2.png")" alt="" />
+							<div class="col-cnt">
+								<h2 style="font-family: SF;">Manutencao</h2>
+								<p style="text-align: justify;">Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo;</p>
+								<a href="/manu" class="more">Ver Mais</a>
+							</div>
+						</div>
+						<div class="col">
+							<img src="@routes.Assets.at("stylesheets/images/col-img3.png")" alt="" />
+							<div class="col-cnt">
+								<h2 style="font-family: SF;">Pneus</h2>
+								<p style="text-align: justify;">Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo;</p>
+								<a href="/pneu" class="more">Ver Mais</a>
+							</div>
+						</div>
+						<div class="cl">&nbsp;</div>
+					</section>
+					<section class="post">
+						<div class="video-holder">
+							<img src="@routes.Assets.at("stylesheets/images/video-img.png")" alt="" />
+						</div>
+							<div class="post-cnt">
+								<h2 style="font-family: SF;">Manutencao Preventiva</h2>
+								<div style="width:400px;"><p style="text-align: justify;"><strong>Texto de exemplo; Texto de exemplo; Texto de exemplo;</strong>Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo;</p>
+								</div>
+								<ul>
+									<li><a href="/prev">Preventiva 1</a></li>
+									<li><a href="/prev">Preventiva 2</a></li>
+									<li><a href="/prev">Preventiva 3</a></li>
+									<li><a href="/prev">Preventiva 4</a></li>
+								</ul>
+						</div>
+						<div class="cl">&nbsp;</div>
+					</section>
+					<div style="margin:0 auto; width:700px;">
+						<section class="testimonial">
+							<h2 style="font-family: SF;">Agendamento</h2>
+
+							<p style="text-align: justify;" >Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; Texto de exemplo; </p>
+
+							<p class="author">Paulo, <strong>Auto-Help</strong></p>
+						</section>
+					</div>
+				</div>
+				<!-- end of main -->
+				<!-- Fim Index -->
+}

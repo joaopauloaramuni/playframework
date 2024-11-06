@@ -1,0 +1,32 @@
+@(userForm: Form[User], message: String)
+@import helper._
+@import helper.twitterBootstrap._
+
+@main("Auto-Help") {
+		
+		<!--Admin-->
+		<form><input id="msg" type="hidden" value=@message></input></form>
+		<div style="background-color: #FAFAFA; width:100%;">
+			<br>
+			<h1 style="color: #ED1E25; text-align:center; font-family:SF Sports;">Admin</h1>
+			<br>
+			<div style="font-family: T1; text-align:center; padding:10px; border: thin solid #ED1E25; margin:0 auto; width: 200px; height: 150px; background-color: #FFFFFF;">
+			@helper.form(action = routes.Application.action_admin) {
+				
+				<fieldset>
+					<legend>@message</legend>
+						@inputText( userForm("username"), '_label -> "Usuario", '_help -> "",
+						'_error -> userForm.globalError, 'size -> 20 )
+				
+						@inputPassword( userForm("password"), '_label -> "Senha", '_help -> "",
+						'_error -> userForm.globalError, 'size -> 20 )
+					</fieldset>
+					<br>
+					<input class="i2Style" type="submit" value="Logar"></input>
+			}
+			</div>
+			<br>
+		</div>
+		
+		<!--Fim Admin-->
+}

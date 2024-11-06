@@ -1,0 +1,160 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<head>
+		<meta name="author" content="Joao Paulo Aramuni">
+	  	<meta name="description" content="Aplicativo Java para Web que utiliza Play Framework 2.0">
+	  	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+		<title>@title</title>
+		
+		<link rel="shortcut icon" href="@routes.Assets.at("stylesheets/images/favicon.png")" />
+
+		<link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/style.css")" />
+		<link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/flexslider.css")" />
+			
+		<script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-1.8.0.min.js")" ></script>
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="@routes.Assets.at("javascripts/modernizr.custom.js")" ></script>
+		<![endif]-->
+		
+		<script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.flexslider-min.js")" ></script>
+		
+		<script type="text/javascript" src="@routes.Assets.at("javascripts/functions.js")" ></script>
+ 
+		<script type="text/javascript">
+			function msgbox(){
+				var msg = document.getElementById('msg').value;
+				
+				if(msg != ""){
+					alert(msg);
+				}
+			}
+		</script> 
+
+    </head>
+    <body onload="msgbox()">
+	<!-- wraper -->
+	<div id="wrapper">
+		<!-- shell -->
+		<div class="shell">
+			<!-- container -->
+			<div class="container">
+				<!-- header -->
+				<div><img src="@routes.Assets.at("stylesheets/images/cab.png")"></img></div>
+				<div style="width:990px; height:143px;">
+					<div style="float:left;width:600px; height: 133px;">
+						<header id="header">
+							<h1 id="logo"><a href="/">Auto-Help</a></h1>
+						</header>
+					</div>
+					<div style="float:right;width:300px;">
+						<form method="post" action="/consulta">
+							<table cellspacing="15">
+								<tr><td><span class="consultaTopo">Consulta R&aacute;pida de Servi&ccedil;os</span></td></tr>
+								<tr><td><span class="consultaTopo">Placa:&nbsp;</span><input  class="consultaTopoP" type="text" value="" size="3"></input>-<input class="consultaTopoP" type="text" value="" size="4"></input></td></tr>
+								<tr><td><input class="i2Style" type="submit" value="Consultar"></input></td></tr>
+							</table>
+						</form>
+					</div>
+				</div>
+				<!-- end of header -->
+				<!-- navigation -->
+				<nav id="navigation">
+					<a href="/" class="nav-btn">HOME<span class="arr"></span></a>
+					<ul style="font-family: T1">
+						<li class="active"><div style="text-align:center; width:165px"><a href="/">HOME</a></div></li>
+						<li><div style="text-align:center; width:165px"><a href="/serv">SERVI&Ccedil;OS</a></div></li>
+						<li><div style="text-align:center; width:165px"><a href="/pec">PE&Ccedil;AS</a></div></li>
+						<li><div style="text-align:center; width:165px"><a href="/orc">OR&Ccedil;AMENTOS</a></div></li>
+						<li><div style="text-align:center; width:165px"><a href="/quem">QUEM SOMOS</a></div></li>
+						<li><div style="text-align:center; width:165px"><a href="/contato">CONTATO</a></div></li>
+					</ul>
+				</nav>
+				<!-- end of navigation -->
+				@content
+				<div class="socials">
+					<div class="socials-inner">
+						<h3 style="font-family: T2;">Redes Sociais</h3>
+						<ul>
+							<li><a href="/" class="facebook-ico"><span></span>Facebook</a></li>
+							<li><a href="/" class="twitter-ico"><span></span>Twitter</a></li>
+							<li><a href="/" class="rss-feed-ico"><span></span>Rss-feed</a></li>
+							<li><a href="/" class="myspace-ico"><span></span>myspace</a></li>
+							<li><a href="/" class="john-doe-123-ico"><span></span>john.doe.123</a></li>
+						</ul>
+						<div class="cl">&nbsp;</div>
+					</div>
+				</div>
+				<div id="footer">
+					<div class="footer-cols">
+						<div class="col">
+							<h2 style="font-family: SF; color:#CCC">Servicos</h2>
+							<ul>
+								<li><a href="/serv">Servi&ccedil;o 1</a></li>
+								<li><a href="/serv">Servi&ccedil;o 2</a></li>
+								<li><a href="/serv">Servi&ccedil;o 3</a></li>
+								<li><a href="/serv">Servi&ccedil;o 4</a></li>
+							</ul>
+						</div>
+						<div class="col">
+							<h2 style="font-family: SF; color:#CCC">Pecas</h2>
+							<ul>
+								<li><a href="/pec">Produto 1</a></li>
+								<li><a href="/pec">Produto 2</a></li>
+								<li><a href="/pec">Produto 3</a></li>
+								<li><a href="/pec">Produto 4</a></li>
+							</ul>
+						</div>
+						<div class="col">
+							<h2 style="font-family: SF; color:#CCC">Fotos</h2>
+							<ul>
+								<li><a href="/">FOTO 1</a></li>
+								<li><a href="/">FOTO 2</a></li>
+								<li><a href="/">FOTO 3</a></li>
+								<li><a href="/">FOTO 4</a></li>
+							</ul>
+						</div>
+						<div class="col">
+							<h2 style="font-family: SF; color:#CCC">Parceiros</h2>
+							<ul>
+								<li><a href="/">Parceiro 1</a></li>
+								<li><a href="/">Parceiro 2</a></li>
+								<li><a href="/">Parceiro 3</a></li>
+								<li><a href="/">Parceiro 4</a></li>
+							</ul>
+						</div>
+						<div class="cl">&nbsp;</div>
+					</div>
+					<!-- end of footer-cols -->
+					<div class="footer-bottom">
+						<nav class="footer-nav">
+							<ul>
+								<li class="active"><a href="/">HOME</a></li>
+								<li><a href="/serv">SERVI&Ccedil;OS</a></li>
+								<li><a href="/pec">PE&Ccedil;AS</a></li>
+								<li><a href="/orc">OR&Ccedil;AMENTOS</a></li>
+								<li><a href="/quem">QUEM SOMOS</a></li>
+								<li><a href="/contato">CONTATO</a></li>
+								<li><a href="/admin"><span style="padding-left: 40px; font-family:T1; color:#ED1C24;">ADMIN</span></a></li>
+							</ul>
+						</nav>
+						<p class="copy">&copy; Copyright 2014 Auto-Help <span>|</span> <strong>Design by <a href="http://www.facebook.com/joaopaulo.aramuni/" target="_blank">Aramuni</a></strong></p>						
+						<div class="cl">&nbsp;</div>
+					</div>
+					<div style="background: url(@routes.Assets.at("stylesheets/images/old_slide-img.png")) repeat 0 0;" class="footer-bottom">
+					&nbsp;
+					</div>
+				</div>
+			</div>
+			<!-- end of container -->	
+		</div>
+		<!-- end of shell -->	
+	</div>
+	<!-- end of wrapper -->
+    </body>
+</html>
