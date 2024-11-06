@@ -1,9 +1,0 @@
-2013-05-25 14:52:03,051 - [INFO] - from play in main 
-Listening for HTTP on port 9000...
-
-2013-05-25 14:52:17,255 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
-database [default] connected at jdbc:mysql://localhost/contato
-
-2013-05-25 14:52:19,889 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
-Application started (Dev)
-
