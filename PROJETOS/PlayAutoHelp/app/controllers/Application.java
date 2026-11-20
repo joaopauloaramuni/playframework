@@ -1067,7 +1067,7 @@ public class Application extends Controller {
 			email.setFrom(sender); // remetente
 			email.setSubject(subject); // assunto do e-mail
 			email.setMsg(message); // conteudo do e-mail
-			email.setAuthentication("joaopauloaramuni@gmail.com", "4llmnon500");
+			email.setAuthentication(System.getenv("SMTP_USER"), System.getenv("SMTP_PASSWORD")); // credenciais via variaveis de ambiente
 			email.setSmtpPort(465);
 			email.setSSL(true);
 			email.setTLS(true);
