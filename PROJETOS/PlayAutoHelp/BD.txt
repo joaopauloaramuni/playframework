@@ -20,5 +20,5 @@ create table log (id_log serial primary key, id_usuario integer, data varchar(25
 create table atend (id_atend integer, id_serv integer, id_func integer, id_veic integer, vlr_total varchar(255), desconto varchar(255), data_e varchar(255), data_s varchar(255), 
 finalizado varchar(255), primary key (id_atend, id_serv), foreign key (id_func) REFERENCES funcionario (id_func), foreign key (id_veic) REFERENCES veiculo(id_veic));
 
-insert into usuario values (1, 1, 'paulo', '040792');
+insert into usuario values (1, 1, 'admin', 'SUA_SENHA');
 insert into peca values (0, '', '', '');

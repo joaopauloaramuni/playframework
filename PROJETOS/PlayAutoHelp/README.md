@@ -224,7 +224,7 @@ O projeto ficou parcialmente concluído. Quem for estudar ou reaproveitar o cód
 - **Valor total do atendimento não é calculado** (`vlr_total` fica vazio — há um comentário `//Calcular` no código).
 - **Relatórios** e a rota `/consulta` não foram implementados.
 - A tabela `log` existe no banco, mas não é usada pela aplicação.
-- **Credenciais do banco no código-fonte**, escritas diretamente em `Application.java`; o ideal é usar variáveis de ambiente, como já é feito com a conta SMTP (`SMTP_USER` / `SMTP_PASSWORD`).
+- **Credenciais do banco fixas no código**: ficam em `Application.java` (hoje com os *placeholders* `SEU_HOST`, `SEU_BANCO`, `SEU_USUARIO` e `SUA_SENHA`); o ideal é usar variáveis de ambiente, como já é feito com a conta SMTP (`SMTP_USER` / `SMTP_PASSWORD`).
 - **Senhas em texto puro** na tabela `usuario`.
 - Todos os campos numéricos e de data são `varchar`.
 - O `PreparedStatement` é um campo `static` compartilhado e as conexões JDBC não usam pool.
