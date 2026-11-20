@@ -180,7 +180,7 @@ CREATE TABLE email (
    props.setProperty("password", "SUA_SENHA");
    ```
    (Para um banco local sem SSL, remova o parâmetro `sslfactory` da URL.)
-3. Ajuste a conta SMTP no método `sendEmail()` se quiser testar o envio de e-mails.
+3. Para testar o envio de e-mails, defina as variáveis de ambiente `SMTP_USER` e `SMTP_PASSWORD` (conta do Gmail com *senha de app*).
 4. Rode:
    ```bash
    cd "PlayAgenda PostgreSQL"
@@ -222,7 +222,7 @@ A pasta [`public/arquivo`](public/arquivo) contém (também disponíveis em `/do
 
 ## ⚠️ Observações e limitações conhecidas
 
-- **Credenciais no código-fonte**: a URL, o usuário e a senha do banco do Heroku e da conta SMTP estão escritos diretamente em `Application.java`. O correto seria lê-los de variáveis de ambiente (`DATABASE_URL`, etc.).
+- **Credenciais do banco no código-fonte**: a URL, o usuário e a senha do banco do Heroku estão escritos diretamente em `Application.java`. O correto seria lê-los de variáveis de ambiente (`DATABASE_URL`), como já é feito com a conta SMTP (`SMTP_USER` / `SMTP_PASSWORD`).
 - **Senhas em texto puro** na tabela `usuario` (sem hash).
 - **Sem chaves primárias** nas tabelas; a identificação é feita por `nome`/`username`.
 - O `PreparedStatement` é um campo `static` compartilhado no controller (não é seguro com requisições concorrentes).
