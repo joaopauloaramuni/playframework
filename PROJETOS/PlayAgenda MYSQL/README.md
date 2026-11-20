@@ -177,7 +177,12 @@ A conexão aparece em **dois lugares**, e ambos precisam apontar para o seu banc
   ```
 - método `abrirConexao()` em `app/controllers/Application.java` (URL, usuário e senha do JDBC).
 
-Para o envio de e-mails, ajuste também o método `sendEmail()` com uma conta SMTP válida (no Gmail atual é necessário usar uma *senha de app*).
+Para o envio de e-mails, defina as variáveis de ambiente `SMTP_USER` e `SMTP_PASSWORD` com uma conta do Gmail (hoje é necessário usar uma *senha de app*):
+
+```bash
+export SMTP_USER=sua.conta@gmail.com
+export SMTP_PASSWORD=sua_senha_de_app
+```
 
 ### 3. Rodar
 
@@ -203,7 +208,7 @@ A pasta [`public/arquivo`](public/arquivo) contém os documentos originais do tr
 
 Pontos que refletem a época e o caráter acadêmico do projeto — importantes caso alguém queira reaproveitar o código:
 
-- **Credenciais no código-fonte**: usuário/senha do banco e da conta SMTP estão escritos diretamente em `application.conf` e `Application.java`. O ideal é movê-los para variáveis de ambiente.
+- **Credenciais do banco no código-fonte**: usuário/senha do MySQL estão escritos diretamente em `application.conf` e `Application.java`. O ideal é movê-los para variáveis de ambiente, como já é feito com a conta SMTP (`SMTP_USER` / `SMTP_PASSWORD`).
 - **Senhas em texto puro** na tabela `usuario` (sem hash).
 - **Sem chaves primárias** nas tabelas; a identificação é feita por `nome`/`username`.
 - O `PreparedStatement` é um campo `static` compartilhado no controller, o que não é seguro com requisições concorrentes.
