@@ -222,7 +222,7 @@ A pasta [`public/arquivo`](public/arquivo) contém (também disponíveis em `/do
 
 ## ⚠️ Observações e limitações conhecidas
 
-- **Credenciais do banco no código-fonte**: a URL, o usuário e a senha do banco do Heroku estão escritos diretamente em `Application.java`. O correto seria lê-los de variáveis de ambiente (`DATABASE_URL`), como já é feito com a conta SMTP (`SMTP_USER` / `SMTP_PASSWORD`).
+- **Credenciais do banco fixas no código**: a URL, o usuário e a senha do banco ficam em `Application.java` (hoje com os *placeholders* `SEU_HOST`, `SEU_BANCO`, `SEU_USUARIO` e `SUA_SENHA`). O correto seria lê-los de variáveis de ambiente (`DATABASE_URL`), como já é feito com a conta SMTP (`SMTP_USER` / `SMTP_PASSWORD`).
 - **Senhas em texto puro** na tabela `usuario` (sem hash).
 - **Sem chaves primárias** nas tabelas; a identificação é feita por `nome`/`username`.
 - O `PreparedStatement` é um campo `static` compartilhado no controller (não é seguro com requisições concorrentes).
