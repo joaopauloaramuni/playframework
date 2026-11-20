@@ -206,7 +206,7 @@ cliente 1───N veiculo 1───N atend N───1 funcionario 1───
    props.setProperty("password", "SUA_SENHA");
    // remova props.setProperty("ssl", "true") para um banco local sem SSL
    ```
-4. Se quiser testar o Fale Conosco, ajuste a conta SMTP e o destinatário em `action_sendEmail()`.
+4. Se quiser testar o Fale Conosco, defina as variáveis de ambiente `SMTP_USER` e `SMTP_PASSWORD` (conta do Gmail com *senha de app*) e ajuste o destinatário fixo em `action_sendEmail()`.
 5. Rode:
    ```bash
    cd PlayAutoHelp
@@ -224,7 +224,7 @@ O projeto ficou parcialmente concluído. Quem for estudar ou reaproveitar o cód
 - **Valor total do atendimento não é calculado** (`vlr_total` fica vazio — há um comentário `//Calcular` no código).
 - **Relatórios** e a rota `/consulta` não foram implementados.
 - A tabela `log` existe no banco, mas não é usada pela aplicação.
-- **Credenciais no código-fonte** (banco e SMTP) escritas diretamente em `Application.java`; o ideal é usar variáveis de ambiente.
+- **Credenciais do banco no código-fonte**, escritas diretamente em `Application.java`; o ideal é usar variáveis de ambiente, como já é feito com a conta SMTP (`SMTP_USER` / `SMTP_PASSWORD`).
 - **Senhas em texto puro** na tabela `usuario`.
 - Todos os campos numéricos e de data são `varchar`.
 - O `PreparedStatement` é um campo `static` compartilhado e as conexões JDBC não usam pool.
