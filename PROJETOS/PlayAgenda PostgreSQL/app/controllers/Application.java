@@ -78,10 +78,10 @@ public class Application extends Controller {
 	// Abrir Conexao
 	private static Connection abrirConexao() throws SQLException {
 
-		String url = "jdbc:postgresql://ec2-54-227-255-156.compute-1.amazonaws.com:5432/df9o5n3jucq3ae?sslfactory=org.postgresql.ssl.NonValidatingFactory";
+		String url = "jdbc:postgresql://SEU_HOST:5432/SEU_BANCO?sslfactory=org.postgresql.ssl.NonValidatingFactory";
 		Properties props = new Properties();
-		props.setProperty("user", "ggpbjbufntnjbr");
-		props.setProperty("password", "n8_4Oj6lXnDQox_bQKTMv4OTHe");
+		props.setProperty("user", "SEU_USUARIO");
+		props.setProperty("password", "SUA_SENHA");
 		props.setProperty("ssl", "true");
 		Connection conn = DriverManager.getConnection(url, props);
 
