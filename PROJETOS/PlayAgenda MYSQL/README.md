@@ -208,7 +208,7 @@ A pasta [`public/arquivo`](public/arquivo) contém os documentos originais do tr
 
 Pontos que refletem a época e o caráter acadêmico do projeto — importantes caso alguém queira reaproveitar o código:
 
-- **Credenciais do banco no código-fonte**: usuário/senha do MySQL estão escritos diretamente em `application.conf` e `Application.java`. O ideal é movê-los para variáveis de ambiente, como já é feito com a conta SMTP (`SMTP_USER` / `SMTP_PASSWORD`).
+- **Credenciais do banco fixas no código**: usuário/senha do MySQL ficam em `application.conf` e `Application.java` (hoje com os *placeholders* `SEU_USUARIO` / `SUA_SENHA`, que precisam ser trocados). O ideal é movê-los para variáveis de ambiente, como já é feito com a conta SMTP (`SMTP_USER` / `SMTP_PASSWORD`).
 - **Senhas em texto puro** na tabela `usuario` (sem hash).
 - **Sem chaves primárias** nas tabelas; a identificação é feita por `nome`/`username`.
 - O `PreparedStatement` é um campo `static` compartilhado no controller, o que não é seguro com requisições concorrentes.
