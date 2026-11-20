@@ -8,7 +8,7 @@
 
 **Auto Help** é um sistema web para oficinas mecânicas desenvolvido em **Java** com o **Play Framework 2.0.2** e **PostgreSQL**. Ele reúne um **site institucional** (serviços, peças, orçamentos, contato) e um **painel administrativo** para cadastro de clientes, veículos, funcionários, peças, serviços e atendimentos.
 
-Projeto acadêmico desenvolvido na **Universidade FUMEC** entre **2013 e 2014**.
+Projeto **freelancer** desenvolvido para uma oficina mecânica entre **2013 e 2014**.
 
 > ⚠️ **Projeto legado.** Escrito para o Play 2.0.2, sbt 0.11.3 e Scala 2.9.1. Mantido como registro histórico e material de estudo; algumas funcionalidades ficaram incompletas (ver [limitações](#-observações-e-limitações-conhecidas)).
 
@@ -234,7 +234,7 @@ O projeto ficou parcialmente concluído. Quem for estudar ou reaproveitar o cód
 
 ## 👤 Autor
 
-**João Paulo Aramuni** — Universidade FUMEC, 2013/2014.
+**João Paulo Aramuni** — projeto freelancer para oficina mecânica, 2013/2014.
 
 - GitHub: [@joaopauloaramuni](https://github.com/joaopauloaramuni)
 
