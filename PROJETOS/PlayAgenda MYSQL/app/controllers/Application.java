@@ -80,8 +80,8 @@ public class Application extends Controller {
 
 		String url = "jdbc:mysql://localhost/contato";
 		Properties props = new Properties();
-		props.setProperty("user", "root");
-		props.setProperty("password", "jp5811518");
+		props.setProperty("user", "SEU_USUARIO");
+		props.setProperty("password", "SUA_SENHA");
 		Connection conn = DriverManager.getConnection(url, props);
 
 		return conn;
